@@ -1,0 +1,516 @@
+<odoo>
+    <data>
+
+        <template id="listing">
+            <t t-call="website.layout">
+                <section class="main">
+        <div class="half-width" id="logo">
+            <h1>Hospital Logo</h1>
+        </div>
+        <div class="half-width" id="main-menu">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SEARCH</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="navbar">
+            <div class="nav">
+                <div class="subnav">
+                    <button class="subnavbtn">Appointment Confirmation<i class="fa fa-caret-down"></i></button>
+                    <div class="subnav-content">
+                      <a href="#">Doctor List</a>
+                      <a href="#">Time</a>
+                      <a href="#">Appointment Slot</a>
+                    </div>
+                  </div>
+                  <a href="#">Symtom Checking</a>
+
+                <div class="subnav">
+                  <button class="subnavbtn">Location<i class="fa fa-caret-down"></i></button>
+                  <div class="subnav-content">
+                    <a href="#">Hospital</a>
+                    <a href="#">Root</a>
+                  </div>
+                </div>
+
+                <div class="subnav">
+                  <button class="subnavbtn">Brief of Medicine<i class="fa fa-caret-down"></i></button>
+                  <div class="subnav-content">
+                    <a href="#">Alternative</a>
+                    <a href="#">Avaibility</a>
+                  </div>
+                </div>
+                <a href="login.html">Cost of Medicine</a>
+                <a href="login.html">Overall Fees</a>
+                <a href="login.html">Lab Information</a>
+            </div>
+          </div>
+    </section>
+
+
+                <section>
+        <!-- name input -->
+        <input class="m-5" type="text" name="" id="medicineName" placeholder="MEDICINE NAME"/>
+        <!-- form -->
+
+            <!-- left side -->
+            <div class="col m-2">
+                <div class="container">
+                    <form action="/test/" method="POST" role="form">
+                   <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                       <div class="row">
+                            <div class="col-25">
+                                <label for="">Company Name</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="" name="" placeholder="Ex: Round Company LTD"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="">MG</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="" name="" placeholder="Ex: 10mg"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="">Group</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="" name="">
+                                    <option value="">Tablet</option>
+                                    <option value="">injection</option>
+                                    <option value="">Capsule</option>
+                                    <option value="">Suspension</option>
+                                    <option value="">Syrup</option>
+                                    <option value="">Drop</option>
+                                    <option value="">Ointment</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="">Drug Class</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="" name="" placeholder="Ex: Drug Class"/>
+                            </div>
+                        </div>
+
+                        <section class="p-5">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+              <a class="nav-link active" id="indications" data-bs-toggle="tab" href="#des-one" role="tab" aria-controls="des-one" aria-selected="true">Indications</a>
+
+              <a class="nav-link" id="adult-dose" data-bs-toggle="tab" href="#des-two" role="tab" aria-controls="des-two" aria-selected="false">Adult dose</a>
+
+              <a class="nav-link" id="renal-dose" data-bs-toggle="tab" href="#des-three" role="tab" aria-controls="des-three" aria-selected="false">Renal dose</a>
+
+              <a class="nav-link" id="administration" data-bs-toggle="tab" href="#des-four" role="tab" aria-controls="des-four" aria-selected="false">Administration</a>
+
+              <a class="nav-link" id="contraindications" data-bs-toggle="tab" href="#des-five" role="tab" aria-controls="des-five" aria-selected="false">Contraindications</a>
+
+              <a class="nav-link" id="side-effects" data-bs-toggle="tab" href="#des-six" role="tab" aria-controls="des-six" aria-selected="false">Side effects</a>
+
+              <a class="nav-link" id="precaution-warning" data-bs-toggle="tab" href="#des-seven" role="tab" aria-controls="des-seven" aria-selected="false">Precautions and warnings</a>
+
+              <a class="nav-link" id="pregnancy-lactation" data-bs-toggle="tab" href="#des-eight" role="tab" aria-controls="des-eight" aria-selected="false">Pregnancy and Lactation</a>
+
+              <a class="nav-link" id="therapeutic-class" data-bs-toggle="tab" href="#des-nine" role="tab" aria-controls="des-nine" aria-selected="false">Therapeutic class</a>
+
+              <a class="nav-link" id="mode-action" data-bs-toggle="tab" href="#des-ten" role="tab" aria-controls="des-ten" aria-selected="false">Mode of Action</a>
+
+              <a class="nav-link" id="interaction" data-bs-toggle="tab" href="#des-eleven" role="tab" aria-controls="des-eleven" aria-selected="false">Interaction</a>
+            </div>
+          </nav>
+          <!-- tab description area -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+          <div class="tab-content" id="nav-tabContent">
+
+            <div class="tab-pane fade show active" id="des-one" role="tabpanel" aria-labelledby="indications">
+                <div class="col-75">
+                    <textarea id="" name="subject" placeholder="Write about indications..." style="height:200px"></textarea>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-two" role="tabpanel" aria-labelledby="adult-dose">
+                <div class="col-75">
+                    <textarea id="" name="subject1" placeholder="Write about adult dose..." style="height:200px"></textarea>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-three" role="tabpanel" aria-labelledby="renal-dose">
+                <div class="col-75">
+                    <textarea id="" name="subject2" placeholder="Write about renal dose..." style="height:200px"></textarea>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-four" role="tabpanel" aria-labelledby="administration">
+                <div class="col-75">
+                    <textarea id="" name="subject3" placeholder="Write about administration..." style="height:200px"></textarea>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-five" role="tabpanel" aria-labelledby="contraindications">
+                <div class="col-75">
+                    <textarea id="" name="subject4" placeholder="Write about contraindications..." style="height:200px"></textarea>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-six" role="tabpanel" aria-labelledby="side-effects">
+                <div class="col-75">
+                    <textarea id="" name="subject5" placeholder="Write about side effects..." style="height:200px"></textarea>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-seven" role="tabpanel" aria-labelledby="precaution-warning">
+                <div class="col-75">
+                    <textarea id="" name="subject6" placeholder="Write precautions and warnings..." style="height:200px"></textarea>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-eight" role="tabpanel" aria-labelledby="pregnancy-lactation">
+                <div class="col-75">
+                    <textarea id="" name="subject7" placeholder="Write about pregnancy and lactation..." style="height:200px"></textarea>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-nine" role="tabpanel" aria-labelledby="therapeutic-class">
+                <div class="col-75">
+                    <textarea id="" name="subject8" placeholder="Write about therapeutic class..." style="height:200px"></textarea>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-ten" role="tabpanel" aria-labelledby="mode-action">
+                <div class="col-75">
+                    <textarea id="" name="subject9" placeholder="Write about mode of action..." style="height:200px"></textarea>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-eleven" role="tabpanel" aria-labelledby="interaction">
+                <div class="col-75">
+                    <textarea id="" name="subject10" placeholder="Write about interaction..." style="height:200px"></textarea>
+                  </div>
+            </div>
+          </div>
+    </section>
+    <section>
+        <div>
+            <!-- Add button -->
+            <button id="addBtn">ADD</button>
+        </div>
+    </section>
+
+
+                    </form>
+                </div>
+            </div>
+
+
+
+
+            <!-- right side -->
+
+    </section>
+
+            </t>
+        </template>
+
+
+        <template id="object">
+            <t t-call="website.layout">
+                <h1>success</h1>
+            </t>
+        </template>
+         <template id="object2">
+            <t t-call="website.layout">
+               <section class="main">
+        <div class="half-width" id="logo">
+            <h1>Hospital Logo</h1>
+        </div>
+        <div class="half-width" id="main-menu">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SEARCH</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="navbar">
+            <div class="nav">
+                <div class="subnav">
+                    <button class="subnavbtn">Appointment Confirmation<i class="fa fa-caret-down"></i></button>
+                    <div class="subnav-content">
+                        <a href="#">Doctor List</a>
+                        <a href="#">Time</a>
+                        <a href="#">Appointment Slot</a>
+                    </div>
+                </div>
+                <a href="#">Symtom Checking</a>
+
+                <div class="subnav">
+                    <button class="subnavbtn">Location<i class="fa fa-caret-down"></i></button>
+                    <div class="subnav-content">
+                        <a href="#">Hospital</a>
+                        <a href="#">Root</a>
+                    </div>
+                </div>
+
+                <div class="subnav">
+                    <button class="subnavbtn">Brief of Medicine<i class="fa fa-caret-down"></i></button>
+                    <!-- <div class="subnav-content">
+                        <a href="#">Alternative</a>
+                        <a href="#">Avaibility</a>
+                    </div> -->
+                </div>
+                <a href="login.html">Cost of Medicine</a>
+                <a href="login.html">Overall Fees</a>
+                <a href="login.html">Lab Information</a>
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <form class="src" action="action_page.php">
+            <img id="chobi" src="images/searchtittle2.png.jpg" alt="SEARCH" />
+            <input type="text" placeholder="Search medicine name " name="search"/>
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <div class="srcbtn">
+            <button class="btn">Signup</button>
+            <button class="btn">Login</button>
+        </div>
+    </section>
+
+            </t>
+        </template>
+
+        <template id="object1">
+            <t t-call="website.layout">
+
+<section class="main">
+        <div class="half-width" id="logo">
+            <h1>Hospital Logo</h1>
+        </div>
+        <div class="half-width" id="main-menu">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SEARCH</a></li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="navbar">
+            <div class="nav">
+                <div class="subnav">
+                    <button class="subnavbtn">Appointment Confirmation<i class="fa fa-caret-down"></i></button>
+                    <div class="subnav-content">
+                      <a href="#">Doctor List</a>
+                      <a href="#">Time</a>
+                      <a href="#">Appointment Slot</a>
+                    </div>
+                  </div>
+                  <a href="#">Symtom Checking</a>
+
+                <div class="subnav">
+                  <button class="subnavbtn">Location<i class="fa fa-caret-down"></i></button>
+                  <div class="subnav-content">
+                    <a href="#">Hospital</a>
+                    <a href="#">Root</a>
+                  </div>
+                </div>
+
+                <div class="subnav">
+                  <button class="subnavbtn">Brief of Medicine<i class="fa fa-caret-down"></i></button>
+                  <div class="subnav-content">
+                    <a href="#">Alternative</a>
+                    <a href="#">Avaibility</a>
+                  </div>
+                </div>
+                <a href="login.html">Cost of Medicine</a>
+                <a href="login.html">Overall Fees</a>
+                <a href="login.html">Lab Information</a>
+            </div>
+          </div>
+    </section>
+
+                <section>
+
+        <div class="col m-2">
+        <h1 style="text-align: center;">Napa</h1>
+        </div>
+        <!-- form -->
+        <div class="row align-items-center center p-3">
+            <!-- left side -->
+            <div class="col m-2">
+                <div class="container">
+                    <form action="/result/" method="POST" role="form">
+                      <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="">Company Name</label>
+                            </div>
+                            <div class="col-75">
+                                <label>Beximco Pharmaceuticals limited</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="">MG</label>
+                            </div>
+                            <div class="col-75">
+                                <label>500mg</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="">Group</label>
+                            </div>
+                            <div class="col-75">
+                                <label>Teblet</label>
+                            </div>
+                        </div>
+
+
+
+                       <div class="row">
+                            <div class="col-25">
+                                <label for="">Drug Class</label>
+                            </div>
+                            <div class="col-75">
+                                <label style="font-style:italic;">Paracetamol</label>
+                            </div>
+                        </div>
+
+                       <section class="p-5">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+              <a class="nav-link active" id="indications" data-bs-toggle="tab" href="#des-one" role="tab" aria-controls="des-one" aria-selected="true">Indications</a>
+
+              <a class="nav-link" id="adult-dose" data-bs-toggle="tab" href="#des-two" role="tab" aria-controls="des-two" aria-selected="false">Adult dose</a>
+
+              <a class="nav-link" id="renal-dose" data-bs-toggle="tab" href="#des-three" role="tab" aria-controls="des-three" aria-selected="false">Renal dose</a>
+
+              <a class="nav-link" id="administration" data-bs-toggle="tab" href="#des-four" role="tab" aria-controls="des-four" aria-selected="false">Administration</a>
+
+              <a class="nav-link" id="contraindications" data-bs-toggle="tab" href="#des-five" role="tab" aria-controls="des-five" aria-selected="false">Contraindications</a>
+
+              <a class="nav-link" id="side-effects" data-bs-toggle="tab" href="#des-six" role="tab" aria-controls="des-six" aria-selected="false">Side effects</a>
+
+              <a class="nav-link" id="precaution-warning" data-bs-toggle="tab" href="#des-seven" role="tab" aria-controls="des-seven" aria-selected="false">Precautions and warnings</a>
+
+              <a class="nav-link" id="pregnancy-lactation" data-bs-toggle="tab" href="#des-eight" role="tab" aria-controls="des-eight" aria-selected="false">Pregnancy and Lactation</a>
+
+              <a class="nav-link" id="therapeutic-class" data-bs-toggle="tab" href="#des-nine" role="tab" aria-controls="des-nine" aria-selected="false">Therapeutic class</a>
+
+              <a class="nav-link" id="mode-action" data-bs-toggle="tab" href="#des-ten" role="tab" aria-controls="des-ten" aria-selected="false">Mode of Action</a>
+
+              <a class="nav-link" id="interaction" data-bs-toggle="tab" href="#des-eleven" role="tab" aria-controls="des-eleven" aria-selected="false">Interaction</a>
+            </div>
+          </nav>
+          <!-- tab description area -->
+          <div class="tab-content" id="nav-tabContent">
+
+            <div class="tab-pane fade show active" id="des-one" role="tabpanel" aria-labelledby="indications">
+                <div class="col-75">
+                    <P>The indications of Paracetamol and Caffeine are Headache, Migraine, Toothache, Neuralgia, Feverishness, Period pain, Sore throat, Backache, Helps reduce temperature, Aches and pain of colds and flu</P>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-two" role="tabpanel" aria-labelledby="adult-dose">
+                <div class="col-75">
+                    <P>1-2 tablets every 4-6 hours. Maximum dose: 8 tablets daily.</P>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-three" role="tabpanel" aria-labelledby="renal-dose">
+                <div class="col-75">
+                    <P> Not recommended for children below 12 years.</P>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-four" role="tabpanel" aria-labelledby="administration">
+                <div class="col-75">
+                    <P>This is the combination of Paracetamol (Acetaminophen) and Caffeine. It has analgesic and antipyretic properties. The presence of Caffeine increases the analgesic effect of Paracetamol. Paracetamol is one of the safest and most widely used analgesic and antipyretic. It produces analgesic action by elevation of the pain threshold and antipyresis through action on the hypothalamic heat regulating center. Caffeine is an alkaloid which is a theophylline like Xanthine derivative. By intermolecular association with Paracetamol, Caffeine increases the solubility and transmembrane permeation of Paracetamol. In addition caffeine increases the pain threshold and tolerance of pain. Caffeine has also an intrinsic power to raise vessel tone in the cranial of the brain, which provides another benefit to treat migraine and headache.</P>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-five" role="tabpanel" aria-labelledby="contraindications">
+                <div class="col-75">
+                    <P>Paracetamol is contraindicated in patients with severe renal function impairment and hepatic disease (Viral Hepatitis). Known hypersensitivity to paracetamol or caffeine.</P>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-six" role="tabpanel" aria-labelledby="side-effects">
+                <div class="col-75">
+                    <P>Side effects of paracetamol are usually mild, though haematological reactions including thrombocytopenia, leukopenia, pancytopenia, neutropenia, and agranulocytosis have been reported. Pancreatitis, skin rashes, and other allergic reactions occur occasionally.</P>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-seven" role="tabpanel" aria-labelledby="precaution-warning">
+                <div class="col-75">
+                   <P>Paracetamol and Caffeine should be given cautiously in the following cases: In patients with hepatic or renal failure, in patients taking other hepatotoxic medication. Prolonged use of the drug without consulting a physician should be avoided.</P>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-eight" role="tabpanel" aria-labelledby="pregnancy-lactation">
+                <div class="col-75">
+                    <P>The indications of Paracetamol and Caffeine are Headache, Migraine, Toothache, Neuralgia, Feverishness, Period pain, Sore throat, Backache, Helps reduce temperature, Aches and pain of colds and flu</P>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-nine" role="tabpanel" aria-labelledby="therapeutic-class">
+                <div class="col-75">
+                    <P>Pregnant mothers should consult with doctors before taking Paracetamol and Caffeine. Paracetamol and Caffeine can be taken whilst breast feeding.</P>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-ten" role="tabpanel" aria-labelledby="mode-action">
+                <div class="col-75">
+                    <P>The indications of Paracetamol and Caffeine are Headache, Migraine, Toothache, Neuralgia, Feverishness, Period pain, Sore throat, Backache, Helps reduce temperature, Aches and pain of colds and flu</P>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="des-eleven" role="tabpanel" aria-labelledby="interaction">
+                <div class="col-75">
+                    <P>May reduce serum levels with anticonvulsants (e.g. phenytoin, barbiturates, carbamazepine). May enhance the anticoagulant effect of warfarin and other coumarins with prolonged use. Accelerated absorption with metoclopramide and domperidone. May increase serum levels with probenecid. May increase serum levels of chloramphenicol. May reduce absorption with colestyramine within 1 hr of admin. May cause severe hypothermia with phenothiazine.</P>
+                  </div>
+            </div>
+          </div>
+    </section>
+
+
+                    </form>
+                </div>
+            </div>
+
+                </div>
+
+                </section>
+
+            </t>
+        </template>
+
+
+
+    </data>
+</odoo>
